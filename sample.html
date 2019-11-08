@@ -10,12 +10,12 @@
   <body>
     <div id="app">
       <!-- v-model="name"で、Vue.jsで設定したdateとHTMLのinput要素が同期する -->
-      名前：<input v-model="name">
-      コース：<input v-model="cource">
-      受講期：<input v-model="acceptance_period">
+      name：<input v-model="name">
+      course：<input v-model="course">
+      acceptance period：<input v-model="acceptancePeriod">
       <br>
       <!-- button v-on:click="addStudent"で、buttonがclickされた時に起動するメソッドを選択する -->
-      <button v-on:click="addStudent">入力した生徒を追加する</button>
+      <button v-on:click="addStudent">Add student entered</button>
 
       <ul>
           <!-- v-for="student in students" で、配列studentsを一つ一つ切り出して変数studentに代入している -->
@@ -23,9 +23,9 @@
         <li v-for="student in students" v-bind:key="student.id">
               <!-- {{ }} のなかに書いた記述で、Vue.jsのデータの式展開が行える -->
           ID {{student.id}} /
-          名前 {{student.name}} /
-          コース {{student.cource}} /
-          受講期 {{student.acceptance_period}}
+          name {{student.name}} /
+          course {{student.course}} /
+          acceptance period {{student.acceptancePeriod}}
         </li>
       </ul>
     </div>
